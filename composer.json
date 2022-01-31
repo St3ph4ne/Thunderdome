@@ -1,0 +1,16 @@
+{
+    "name": "beweb/td",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Beweb\\Td\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ssonyan Dumas",
+            "email": "ssonyan.dh@gmail.com"
+        }
+    ],
+    "require": {}
+}
