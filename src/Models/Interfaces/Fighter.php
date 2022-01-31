@@ -1,5 +1,5 @@
 <?php
-namespace Beweb\Td\Models\Interface;
+namespace Beweb\Td\Models\Interfaces;
 
 
 

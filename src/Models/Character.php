@@ -1,7 +1,7 @@
 <?php
 namespace Beweb\Td\Models;
 
-use Beweb\Td\Models\Interface\Fighter;
+use Beweb\Td\Models\Interfaces\Fighter;
 
 class Character implements Fighter {
     private Race $race;
