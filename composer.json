@@ -3,7 +3,11 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Beweb\\Td\\": "src/"
+            "Beweb\\Td\\": "src",
+            "Beweb\\Td\\Models\\": "src/Models",
+            "Beweb\\Td\\Models\\Interfaces\\": "src/Models/Interfaces",
+            "Beweb\\Td\\Models\\Impl\\Job\\": "src/Models/Impl",
+            "Beweb\\Td\\Models\\Impl\\Race\\": "src/Models/Impl"
         }
     },
     "authors": [

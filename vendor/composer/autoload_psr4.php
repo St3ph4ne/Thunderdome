@@ -6,5 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Beweb\\Td\\Models\\Interfaces\\' => array($baseDir . '/src/Models/Interfaces'),
+    'Beweb\\Td\\Models\\Impl\\Race\\' => array($baseDir . '/src/Models/Impl'),
+    'Beweb\\Td\\Models\\Impl\\Job\\' => array($baseDir . '/src/Models/Impl'),
+    'Beweb\\Td\\Models\\' => array($baseDir . '/src/Models'),
     'Beweb\\Td\\' => array($baseDir . '/src'),
 );
