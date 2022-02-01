@@ -13,6 +13,7 @@ class ComposerStaticInitc6ef927b4beffbabc70c37c4a3202e95
             'Beweb\\Td\\Models\\Impl\\Race\\' => 26,
             'Beweb\\Td\\Models\\Impl\\Job\\' => 25,
             'Beweb\\Td\\Models\\' => 16,
+            'Beweb\\Td\\Engines\\' => 17,
             'Beweb\\Td\\' => 9,
         ),
     );
@@ -33,6 +34,10 @@ class ComposerStaticInitc6ef927b4beffbabc70c37c4a3202e95
         'Beweb\\Td\\Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Models',
+        ),
+        'Beweb\\Td\\Engines\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Engines',
         ),
         'Beweb\\Td\\' => 
         array (
