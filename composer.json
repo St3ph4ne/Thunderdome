@@ -14,7 +14,10 @@
             "Beweb\\Td\\Models\\Impl\\Job\\": "src/Models/Impl",
             "Beweb\\Td\\Models\\Impl\\Race\\": "src/Models/Impl",
 
-            "Beweb\\Td\\Models\\Interfaces\\": "src/Models/Interfaces"
+            "Beweb\\Td\\Models\\Interfaces\\": "src/Models/Interfaces",
+
+
+            "Beweb\\Td\\Dal\\": "src/Dal"
         }
     },
     "authors": [
