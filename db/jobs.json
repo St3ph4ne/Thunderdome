@@ -1,0 +1,22 @@
+[
+    {
+      "Job" : "Warrior",
+      "attack_multi" : 2,
+      "defense_multi" : 2,
+      "hp_multi" : 2
+    },
+    {
+        "Job" : "Warlock",
+        "attack_multi" : 1,
+        "defense_multi" : 3,
+        "hp_multi" : 1
+    },
+    {
+        "Job" : "Druid",
+        "attack_multi" : 1,
+        "defense_multi" : 1,
+        "hp_multi" : 4
+    }
+
+
+  ]

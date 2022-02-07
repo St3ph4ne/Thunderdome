@@ -1,0 +1,22 @@
+[
+    {
+      "Race" : "Orc",
+      "attack" : 4,
+      "defense" : 1,
+      "hp" : 2
+    },
+    {
+        "Race" : "Human",
+        "attack" : 2,
+        "defense" : 4,
+        "hp" : 1
+    },
+    {
+        "Race" : "Elf",
+        "attack" : 1,
+        "defense" : 2,
+        "hp" : 4
+    }
+
+
+  ]

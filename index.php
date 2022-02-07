@@ -17,10 +17,10 @@ use Beweb\Td\Models\Impl\Race\Orc;
 // $character->showCharacterstats();
 // $character = new Character(new Human,new Warrior);
 //>>>>>>>>>>>>>>>>>>>>>>>
-// $qty = 3;
-// $my_game = new Game;
-// $my_game->add_character($qty);
-// $my_game->start();
+$qty = 3;
+$my_game = new Game;
+$my_game->add_character($qty);
+$my_game->start();
 //>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -49,24 +49,30 @@ use Beweb\Td\Models\Impl\Race\Orc;
 // file_put_contents("./db/datas.json",$toFile);
 
 
-$dao = new DAO("./db/datas.json");
+// $dao = new DAO("./db/datas.json");
 
-// à faire
-//>>>>>>>>>>>
-$dao = new DAO("./db/races.json");
-//liste des races
-$datas = $dao->load();
-//>>>>>>>>>>>
+// // à faire
+// //>>>>>>>>>>>
+// $RaceDao = new DAO("./db/races.json");
+// //liste des races
+// $RaceDatas = $RaceDao->load();
+// //>>>>>>>>>>>
 
-// à faire
-//>>>>>>>>>>>
-$dao = new DAO("./db/jobs.json");
-//liste des classes
-$datas = $dao->load();
-//>>>>>>>>>>>
+// // à faire
+// //>>>>>>>>>>>
+// $JobDao = new DAO("./db/jobs.json");
+// //liste des classes
+// $RaceDatas = $RaceDao->load();
+// //>>>>>>>>>>>
 
 
-//================================================
-// on charge de la data (on la recup)
-$datas = $dao->load();
-var_dump($datas);
+// //================================================
+// // on charge de la data (on la recup)
+// $RaceDatas = $RaceDao->load();
+// $JobDatas = $JobDao->load();
+// var_dump($RaceDatas);
+// var_dump($JobDatas);
+
+// foreach ($json as $key => $value) {
+//     # code...
+// }
