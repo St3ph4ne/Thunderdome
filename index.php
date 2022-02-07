@@ -2,6 +2,8 @@
 require("./vendor/autoload.php");
 
 use Beweb\Td\Dal\DAO;
+use Beweb\Td\Dal\DAOjob;
+use Beweb\Td\Dal\DAOrace;
 use Beweb\Td\Engines\Game;
 use Beweb\Td\Models\Character;
 use Beweb\Td\Models\Impl\Job\Druid;
@@ -10,17 +12,17 @@ use Beweb\Td\Models\Impl\Job\Warrior;
 use Beweb\Td\Models\Impl\Race\Elf;
 use Beweb\Td\Models\Impl\Race\Human;
 use Beweb\Td\Models\Impl\Race\Orc;
-
+use Beweb\Td\Models\Job;
 
 // var_dump($character);
 // echo $character->stats->attack;
 // $character->showCharacterstats();
 // $character = new Character(new Human,new Warrior);
 //>>>>>>>>>>>>>>>>>>>>>>>
-$qty = 3;
-$my_game = new Game;
-$my_game->add_character($qty);
-$my_game->start();
+// $qty = 3;
+// $my_game = new Game;
+// $my_game->add_character($qty);
+// $my_game->start();
 //>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -51,28 +53,36 @@ $my_game->start();
 
 // $dao = new DAO("./db/datas.json");
 
-// // à faire
-// //>>>>>>>>>>>
-// $RaceDao = new DAO("./db/races.json");
-// //liste des races
-// $RaceDatas = $RaceDao->load();
-// //>>>>>>>>>>>
-
-// // à faire
-// //>>>>>>>>>>>
-// $JobDao = new DAO("./db/jobs.json");
-// //liste des classes
-// $RaceDatas = $RaceDao->load();
-// //>>>>>>>>>>>
 
 
-// //================================================
-// // on charge de la data (on la recup)
+
+//================================================
+// on charge de la data (on la recup)
 // $RaceDatas = $RaceDao->load();
 // $JobDatas = $JobDao->load();
 // var_dump($RaceDatas);
-// var_dump($JobDatas);
 
-// foreach ($json as $key => $value) {
-//     # code...
-// }
+// $jobs = file_get_contents("./db/jobs.json");
+// $jobs_as_array = json_decode($jobs, true);
+// var_dump(key($jobs_as_array[0]));
+
+
+// // à faire
+// //>>>>>>>>>>>
+// $JobDao = new DAOjob();
+// //liste des jobs
+// $JobsDatas = $JobDao->load();
+// //>>>>>>>>>>>
+
+// // à faire
+// //>>>>>>>>>>>
+//racedao = nouvelle classe ()
+$RaceDao = new DAOrace();
+//liste des races
+$RacesDatas = $RaceDao->load();
+// //>>>>>>>>>>>
+
+
+
+// var_dump($JobsDatas);
+var_dump($RacesDatas);

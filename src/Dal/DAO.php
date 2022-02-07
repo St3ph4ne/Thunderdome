@@ -8,10 +8,10 @@ namespace Beweb\Td\Dal;
  * cet objet foruni une couche d'asbstraction afin de faciliter son utilisation
  */
 
-class DAO
+abstract class DAO
 {
 
-  private string $datasource;
+  protected string $datasource;
 
 
   function __construct($datasource)

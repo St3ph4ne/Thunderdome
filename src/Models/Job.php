@@ -1,11 +1,12 @@
 <?php
 namespace Beweb\Td\Models;
 
-abstract class Job  {
+class Job  {
 
-    protected int $hpmultiplicator;
-    protected int $attackmultiplicator;
-    protected int $defensemultiplicator;
+    // public int $att_multi;
+    // public int $def_multi;
+    // public int $hp_multi;
+    public array $stats;
 
     // public function getMultiHpJob()
     // {
@@ -22,8 +23,8 @@ abstract class Job  {
     //     $this->job->getMultiplicatorDefense();
     // }
 
-    abstract function getMultiplicatorHp();
-    abstract function getMultiplicatorAttack();
-    abstract function getMultiplicatorDefense();
+    // abstract function getMultiplicatorHp();
+    // abstract function getMultiplicatorAttack();
+    // abstract function getMultiplicatorDefense();
 
 }
