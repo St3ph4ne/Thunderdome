@@ -99,11 +99,11 @@ $RacesDatas = $RaceDao->load();
 
 // // à faire
 // //>>>>>>>>>>>
-$character = new DAOcharacter();
-$character->createCharacter("Elf", "Warrior");
-// $CharactersDatas = $CharacterDao->load();
+$CharacterDAO = new DAOcharacter($race,$job);
+$CharacterDAO->createCharacter("Elf", "Warrior");
+$CharactersDatas = $CharacterDAO->load();
 // // // //>>>>>>>>>>>
-var_dump($character);
+var_dump($CharactersDatas);
 
 // var_dump($JobDao->findByName("Warrior"));
 // var_dump($JobsDatas);

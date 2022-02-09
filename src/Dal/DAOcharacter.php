@@ -17,13 +17,26 @@ class DAOcharacter extends DAO
     }
 
 
-    function persist(mixed $data)
-    {
-        $character = $this->load();
-        array_push($characters, $data);
-        file_put_contents($this->datasource, json_encode($characters));
+    function persist(mixed $data){
+        $characters = $this->load();
+        $data->id = count($characters) +1;
+        array_push($characters,$data);
+        file_put_contents($this->datasource,json_encode($characters));
     }
 
+
+    /**
+     * Ici on implémente une methode pour creer un personnage 
+     * oui le DAO est un gestionnaire d'entité , il semble normal de lui deléguer 
+     * la fastidieuse tache de fabriquer des personnages (oui ce serait con de faire ça dans l'index.php alors qu'on sait faire des objets ;) )
+     * 
+     * @todo faire en sorte de passer par un objet qui retourne le bon DAO selon ce qu'on veut faire
+     * au lieu de les instanciers dans les methodes (cf : fabrique , singleton ).
+     *
+     * @param string $race idem que pour job mais pour  race , sauf que c'est différent parce que c'est pas pareil alors que les structures sont les mêmes, mais c'est tout a faire similaire malgré le corollaire évident de la propriété recherchée 
+     * @param string $job la classe du personnage pour la chercher afin de l'ajouter a la création du personnage
+     * @return Character le personnage que l'on vient de creer
+     */
     // on recup les datas sous forme de tableau
     function createCharacter(string $race, string $job) : Character
     {
@@ -82,6 +95,8 @@ class DAOcharacter extends DAO
         // on retourne le tableau jobs
         return $characters;
     }
+
+    
 
 
     function findByName($character)

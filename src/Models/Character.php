@@ -3,57 +3,56 @@
 namespace Beweb\Td\Models;
 
 use Beweb\Td\Models\Interfaces\Fighter;
-
+use JsonSerializable;
+use Serializable;
 /**
  * reprensente les Characters qui se battrons les uns les autres
  * Un character est defibni par des caracteristiques de race et de job
  */
-class Character implements Fighter
-{
+class Character implements Fighter , JsonSerializable{
 
-    private Stats $stats;
+    private Race $race;
 
-    public function __construct( $race,  $job)
-    {
+    private Job $job;
 
+
+    public int $pv = 0;
+    public int $att = 0;
+    public int $def = 0;
+
+    public int $id = 0;
+
+
+   
+
+    public function __construct(Race $race,Job $job){
         $this->race = $race;
         $this->job = $job;
-        $this->stats = new Stats();
-        $this->defineStats();
-    }
-
-    public function getName(){
-        return $this->name;
-    }
-
-    public function getRace(){
-        return $this->race;
-    }
-
-    public function getStats(){
-        return $this->stats;
-    }
-
-    public function setName($name){
-        $this->name = $name;        
-    }
-
-    private function defineStats()
-    {
-        $this->stats->attack = $this->race->accessModifiersData()->attack * $this->job->getMultiplicatorAttack();
-        $this->stats->defense = $this->race->accessModifiersData()->defense * $this->job->getMultiplicatorDefense();
-        $this->stats->hp = $this->race->accessModifiersData()->hp * $this->job->getMultiplicatorHp();
-    }
-
-    public function showCharacterstats()
-    {
-        echo  $this->race->emoticon . " " . $this->name. "["."\u{1F50B}" .$this->stats->hp."]". "\n";
-        //echo 'Salut j\'ai ' . $this->stats->attack . " points d'attaque, " . $this->stats->defense . " points de defense et une santé de " . $this->stats->hp . "\n";
     }
 
 
-    function attack(Fighter &$target): void
-    {
+    function attack(Fighter &$target): void{
+
     }
+
+    /**
+     * cette methode issue de l'interface est utilisée par json_encode pour recuperer 
+     * une représentation custom de l'objet courant 
+     * sinon (si on n'implémente pas l'interface JSONSerializable) json_encode parse (transforme) en json les propriétés publiques de l'objet courant
+     * (je vous invite a tester le parsing en jouant avec des propriété public protected et private pour valider mon explication du dessus)
+     * 
+     *
+     * @return mixed
+     */
+    public function jsonSerialize(): mixed{
+        return  array(
+            "id" => $this->id,
+            "race"=>$this->race->id,
+            "job" => $this->job->id,
+            "att" => $this->att,
+            "def" => $this->def,
+            "pv" => $this->pv
+        );
+    }
+
 }
-
