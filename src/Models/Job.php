@@ -3,10 +3,17 @@ namespace Beweb\Td\Models;
 
 class Job  {
 
+
+    public int $id;
+    public int $name;
+    public int $att;
+    public int $def;
+    public int $hp;
+
     // public int $att_multi;
     // public int $def_multi;
     // public int $hp_multi;
-    public array $stats;
+    // public array $stats;
 
     // public function getMultiHpJob()
     // {

@@ -11,5 +11,6 @@ return array(
     'Beweb\\Td\\Models\\Impl\\Job\\' => array($baseDir . '/src/Models/Impl'),
     'Beweb\\Td\\Models\\' => array($baseDir . '/src/Models'),
     'Beweb\\Td\\Engines\\' => array($baseDir . '/src/Engines'),
+    'Beweb\\Td\\Dal\\' => array($baseDir . '/src/Dal'),
     'Beweb\\Td\\' => array($baseDir . '/src'),
 );

@@ -1,32 +1,32 @@
 [
     {
-      "Warrior" : 
+      "name" : "Warrior", 
 
-        {
+        
             "att_multi" : 2,
             "def_multi" : 2,
             "hp_multi" : 2
-        }
+        
       
     },
     {
-        "Warlock" : 
+        "name" : "Warlock", 
   
-          {
+          
               "att_multi" : 2,
               "def_multi" : 2,
               "hp_multi" : 2
-          }
+          
         
     },
     {
-        "Druid" : 
+        "name" : "Druid", 
 
-        {
+        
             "att_multi" : 2,
             "def_multi" : 2,
             "hp_multi" : 2
-        }
+        
       
     }
 

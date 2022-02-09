@@ -11,17 +11,10 @@ use Beweb\Td\Models\Interfaces\Fighter;
 class Character implements Fighter
 {
 
-    private string $name;
-    private Race $race;
-    private Job $job;
     private Stats $stats;
 
-    public function __construct(Race $race, Job $job)
+    public function __construct( $race,  $job)
     {
-        // on recup les statistiques de race (exemple : Elf 50pv50atck50def)
-        // on recup les multiplicateurs de pv attack et defense d'un Job (exemple, un guerrier aura ses pv de Race multiplie par 2) 
-        // et donc on  donne a notre Character ses -> Stats influences par Race(valeur)*Job(coefficient)
-        // (au donne les stats grace a un appel de fonction qui va faire cette operation)
 
         $this->race = $race;
         $this->job = $job;

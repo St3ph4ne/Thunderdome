@@ -2,6 +2,7 @@
 require("./vendor/autoload.php");
 
 use Beweb\Td\Dal\DAO;
+use Beweb\Td\Dal\DAOcharacter;
 use Beweb\Td\Dal\DAOjob;
 use Beweb\Td\Dal\DAOrace;
 use Beweb\Td\Engines\Game;
@@ -13,6 +14,7 @@ use Beweb\Td\Models\Impl\Race\Elf;
 use Beweb\Td\Models\Impl\Race\Human;
 use Beweb\Td\Models\Impl\Race\Orc;
 use Beweb\Td\Models\Job;
+use Beweb\Td\Models\Race;
 
 // var_dump($character);
 // echo $character->stats->attack;
@@ -64,25 +66,46 @@ use Beweb\Td\Models\Job;
 
 // $jobs = file_get_contents("./db/jobs.json");
 // $jobs_as_array = json_decode($jobs, true);
-// var_dump(key($jobs_as_array[0]));
+// if (key($jobs_as_array[0]) == "Warrior") {
+//     // var_dump($jobs_as_array[0]->att_multi);
+//     // print_r(array_values($jobs_as_array[0]));
+
+//     foreach ($jobs_as_array[0] as $key => $stat) {
+//         var_dump ($jobs_as_array[0]->att_multi);
+//     }
+//     echo "test". "\n";
+// }
 
 
 // // à faire
 // //>>>>>>>>>>>
-// $JobDao = new DAOjob();
-// //liste des jobs
-// $JobsDatas = $JobDao->load();
+$JobDao = new DAOjob();
+// liste des jobs
+$JobsDatas = $JobDao->load();
 // //>>>>>>>>>>>
 
 // // à faire
 // //>>>>>>>>>>>
 //racedao = nouvelle classe ()
 $RaceDao = new DAOrace();
-//liste des races
+// liste des races
 $RacesDatas = $RaceDao->load();
 // //>>>>>>>>>>>
 
 
+// $JobsDatas = $JobDao->load();
+// $RacesDatas = $RaceDao->load();
 
+
+// // à faire
+// //>>>>>>>>>>>
+$character = new DAOcharacter();
+$character->createCharacter("Elf", "Warrior");
+// $CharactersDatas = $CharacterDao->load();
+// // // //>>>>>>>>>>>
+var_dump($character);
+
+// var_dump($JobDao->findByName("Warrior"));
 // var_dump($JobsDatas);
-var_dump($RacesDatas);
+// var_dump($RacesDatas);
+// var_dump($CharacterDao);

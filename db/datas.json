@@ -1,10 +1,9 @@
-[
-  {
-    "id" : 1,
-    "firstname" : "Ssonyan"
+[{
+    "id": 1,
+    "firstname": "Ssonyan"
   },
   {
-    "id" : 2,
-    "firstname" : "Lise"
+    "id": 2,
+    "firstname": "Lise"
   }
 ]

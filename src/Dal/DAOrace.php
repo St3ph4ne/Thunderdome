@@ -5,27 +5,30 @@ namespace Beweb\Td\Dal;
 use Beweb\Td\Models\Race;
 
 // extension de classe 
-class DAOrace extends DAO {
+class DAOrace extends DAO
+{
 
     // constructeur 
-    function __construct(){
+    function __construct()
+    {
         // on accède à la propriété datasource et on lui stock notre fichier json de Jobs
         $this->datasource = "./db/races.json";
     }
 
 
-    function persist(mixed $data){
-
+    function persist(mixed $data)
+    {
     }
 
     // on recup les datas sous forme de tableau
-    function load(): array{
+    function load(): array
+    {
 
         // init tableau
         $races = [];
         // on stock dans la variable data notre contenu de fichier json décodé
 
-        $datas = json_decode(file_get_contents($this->datasource),true);
+        $datas = json_decode(file_get_contents($this->datasource), true);
 
         // on loop dans notre fichier json
         foreach ($datas as  $race_as_array) {
@@ -40,12 +43,21 @@ class DAOrace extends DAO {
             // $r->name = $race_as_array["Race"];
 
             $r = $race_as_array;
-            
+
             // on pousse nos données (propriétés de chaque jobs dans le tableau vide jobs)
-            array_push($races,$r);
+            array_push($races, $r);
         }
 
         // on retourne le tableau jobs
         return $races;
+    }
+
+    function findByName($name)
+    {
+        foreach ($this->load() as $key => $race) {
+            if ($race['name'] == $name) {
+                return $race;
+            }
+        }
     }
 }
