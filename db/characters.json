@@ -1,0 +1,20 @@
+[
+    {
+        "id": 2,
+        "name": "Brocoli",
+        "race": 0,
+        "job": 0
+    },
+    {
+        "id": 1,
+        "name": "Ken",
+        "race": 1,
+        "job": 0
+    },
+    {
+        "id": 0,
+        "name": "Sony",
+        "race": 1,
+        "job": 1
+    }
+]

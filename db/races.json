@@ -1,31 +1,16 @@
-[{
-    "name": "Orc",
-    "att": 2,
-    "def": 2,
-    "hp": 2
-  }
-
-  ,
-  {
-    "name": "human",
-
-
-    "att": 2,
-    "def": 2,
-    "hp": 2
-  }
-
-  ,
-  {
-    "name": "Elf",
-
-
-    "att": 2,
-    "def": 2,
-    "hp": 2
-  }
-
-
-
-
+[
+	{
+		"id": 0,
+		"name": "Human",
+		"att": 20,
+		"def": 5,
+		"hp": 150
+	},
+	{
+		"id": 1,
+		"name": "Elf",
+		"att": 40,
+		"def": 2,
+		"hp": 100
+	}
 ]

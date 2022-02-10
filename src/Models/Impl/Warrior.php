@@ -10,29 +10,4 @@ use Beweb\Td\Models\Job;
 */
 class Warrior extends Job {
 
-    /**
-     * Warrior class override clss Job attributs
-     * define multiplicator which will be applied to character Hp, defense and attack points
-    */
-    public function __construct(){
-      $this->hpmultiplicator = 2;
-      $this->attackmultiplicator = 2;
-      $this->defensemultiplicator = 2;
-    }
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Liste des getters
-
-    public function getMultiplicatorHp(){
-      return $this->hpmultiplicator;
-    }
-
-    public function getMultiplicatorAttack(){
-      return $this->attackmultiplicator;
-    }
-
-    public function getMultiplicatorDefense(){
-      return $this->defensemultiplicator;
-    }
-    
 }

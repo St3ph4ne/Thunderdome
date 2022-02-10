@@ -1,37 +1,11 @@
 <?php
 namespace Beweb\Td\Models;
 
-class Job  {
-
-
+class Job {
     public int $id;
-    public int $name;
-    public int $att;
-    public int $def;
-    public int $hp;
-
-    // public int $att_multi;
-    // public int $def_multi;
-    // public int $hp_multi;
-    // public array $stats;
-
-    // public function getMultiHpJob()
-    // {
-    //     $this->job->getMultiplicatorHp();
-    // }
-
-    // public function getMultiAttackJob()
-    // {
-    //     $this->job->getMultiplicatorAttack();
-    // }
-
-    // public function getMultiDefenseJob()
-    // {
-    //     $this->job->getMultiplicatorDefense();
-    // }
-
-    // abstract function getMultiplicatorHp();
-    // abstract function getMultiplicatorAttack();
-    // abstract function getMultiplicatorDefense();
-
+    public String $name;
+    public int $att_multi;
+    public int $def_multi;
+    public int $hp_multi;
+    public int $fumble;
 }
