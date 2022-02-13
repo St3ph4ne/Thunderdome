@@ -1,0 +1,22 @@
+{
+    "name": "beweb/td",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Beweb\\Td\\": "src",
+            "Beweb\\Td\\Dal\\": "src/Dal",
+            "Beweb\\Td\\Engines\\": "src/Engines",
+            "Beweb\\Td\\Models\\": "src/Models",
+            "Beweb\\Td\\Models\\Impl\\Job\\": "src/Models/Impl",
+            "Beweb\\Td\\Models\\Impl\\Race\\": "src/Models/Impl",
+            "Beweb\\Td\\Models\\Interfaces\\": "src/Models/Interfaces"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ssonyan Dumas",
+            "email": "ssonyan.dh@gmail.com"
+        }
+    ],
+    "require": {}
+}
