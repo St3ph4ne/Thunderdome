@@ -52,7 +52,7 @@ use Beweb\Td\Models\Interfaces\Fighter;
         }
 
         /**
-         * Fait combattre les deux combattants jusqu'à que l'un ait plus de point de vie
+         * Fait combattre les deux combattants jusqu'à ce que l'un n'ait plus de point de vie
          *
          * @return Fighter le combattant mort
          */
@@ -61,7 +61,7 @@ use Beweb\Td\Models\Interfaces\Fighter;
                 $this->round++;
                 echo "<span style='color:blue'>Tour " . $this->round . "</span><br>";
 
-                // extrait les rôles en variable
+                // extrait les rôles en variables
                 extract($this->setRole());
                 
                 // attaquant attaque en 1er
